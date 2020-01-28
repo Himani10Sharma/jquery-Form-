@@ -1,0 +1,53 @@
+
+{% load static %}
+<html>
+</head>
+<style>
+    .bs-example{
+        margin: 40px;
+    }
+</style>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body style="background-color:powderblue;"></body>
+
+<div class="bs-example">
+  <h2>Registration</h2>
+
+
+
+  <form method="Post" id="myform" name="registration">{% csrf_token %}
+  <div class="form-group row">
+    <label for="username">username</label>
+        <input type="text" name="username" id="username" />
+ </div>
+      <div class="form-group row">
+    <label for="email">email</label>
+    <input type="email" name="email" id="email" />
+      </div>
+      <div class="form-group row">
+      <label for="text">text</label>
+    <input type="text" name="text" id="text" />
+      </div>
+      <div class="form-group row">
+      <label for="password">password</label>
+      <input type="password" name="password" id="password" />
+      </div>
+    <input type="submit" value="Submit">
+
+
+  </form>
+</div>
+
+
+<script src='{% static "assets/js/validation.js" %}'></script>
+</body>
+</html>
+
+
+
+
+
